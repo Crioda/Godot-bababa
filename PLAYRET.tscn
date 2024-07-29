@@ -1,0 +1,142 @@
+[gd_scene load_steps=26 format=3 uid="uid://bgkbyg6spydk4"]
+
+[ext_resource type="Script" path="res://PLAYRET.gd" id="1_k8b7m"]
+[ext_resource type="Texture2D" uid="uid://w5h3si2ohm2u" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-hurt/player-hurt-2.png" id="2_6i4u7"]
+[ext_resource type="Texture2D" uid="uid://cd5jok3ds3noa" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-1.png" id="3_lwq5m"]
+[ext_resource type="Texture2D" uid="uid://i2ursuqa7ele" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-2.png" id="4_bdol5"]
+[ext_resource type="Texture2D" uid="uid://dgsusgmgc46tt" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-3.png" id="5_8bhc2"]
+[ext_resource type="Texture2D" uid="uid://drmimog3eixfm" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-4.png" id="6_pmua4"]
+[ext_resource type="Texture2D" uid="uid://bbotqio4iniwy" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-5.png" id="7_h875d"]
+[ext_resource type="Texture2D" uid="uid://dkqj8p2mqbw5i" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-6.png" id="8_q07v7"]
+[ext_resource type="Texture2D" uid="uid://b4cn7ylr3gw3j" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-7.png" id="9_eqiej"]
+[ext_resource type="Texture2D" uid="uid://bav5jpsyiav8d" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-8.png" id="10_l5ltr"]
+[ext_resource type="Texture2D" uid="uid://sswed1mopdu8" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-idle/player-idle-9.png" id="11_gy1jy"]
+[ext_resource type="Texture2D" uid="uid://c5cyw0le8sd76" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-1.png" id="12_l1dcv"]
+[ext_resource type="Texture2D" uid="uid://b64bcq3cfim4g" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-2.png" id="13_vjcbw"]
+[ext_resource type="Texture2D" uid="uid://b2smurf6fesqi" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-3.png" id="14_mb3xo"]
+[ext_resource type="Texture2D" uid="uid://jy54hb3gcv8" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-4.png" id="15_35cb7"]
+[ext_resource type="Texture2D" uid="uid://b5tb6ouq8casx" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-5.png" id="16_q1bxf"]
+[ext_resource type="Texture2D" uid="uid://68vmqp3ffehr" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-6.png" id="17_eonvf"]
+[ext_resource type="Texture2D" uid="uid://8ext1b05ewf7" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-7.png" id="18_2n75g"]
+[ext_resource type="Texture2D" uid="uid://bjbcv6k4r4oin" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-skip/player-skip-8.png" id="19_4dk13"]
+[ext_resource type="Texture2D" uid="uid://cftxbeq7armjr" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-jump/player-jump-1.png" id="20_r3gut"]
+[ext_resource type="Texture2D" uid="uid://dtekp0n41kjbn" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-jump/player-jump-2.png" id="21_bc0yn"]
+[ext_resource type="Texture2D" uid="uid://wiqno4to8ed5" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-jump/player-jump-3.png" id="22_x3vmv"]
+[ext_resource type="Texture2D" uid="uid://d4k115vs5aoul" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-jump/player-jump-4.png" id="23_tj5wo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w2jy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_itiu1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6i4u7")
+}],
+"loop": true,
+"name": &"Crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lwq5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bdol5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8bhc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pmua4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pmua4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h875d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q07v7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eqiej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l5ltr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gy1jy")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_l1dcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vjcbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mb3xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_35cb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q1bxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_eonvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2n75g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4dk13")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_r3gut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_bc0yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_x3vmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_tj5wo")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_k8b7m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_w2jy7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_itiu1")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="Camera2D"]
+offset_left = -519.0
+offset_top = -162.0
+offset_right = -470.0
+offset_bottom = -131.0
+text = "Exit"
+
+[connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfwlsxt004hl1"]
+[gd_scene load_steps=7 format=3 uid="uid://dfwlsxt004hl1"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_pgu6a"]
 [ext_resource type="Texture2D" uid="uid://tahufcdywwl7" path="res://Sunny Land Collection Files/Assets/Characters/flying-bird/Sprites/flying-creature-cycle-skin1.png" id="2_1fa1f"]
 [ext_resource type="Texture2D" uid="uid://c2t4jf13o6kc4" path="res://Sunny Land Collection Files/Assets/Characters/Chibi Enemies Pack/Sprites/Bettle/bettle1.png" id="3_xlrk2"]
 [ext_resource type="Texture2D" uid="uid://bcvewy020im8f" path="res://Sunny Land Collection Files/Assets/Environments/Jungle/Layers/middle-a.png" id="4_apbt2"]
-[ext_resource type="Texture2D" uid="uid://dtdfhvnxmmmwn" path="res://Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/crate.png" id="5_4j8wd"]
 [ext_resource type="Texture2D" uid="uid://dymhqsym0pvp2" path="res://Sunny Land Collection Files/Assets/Packs/Sunnyland/environment/Props/house.png" id="6_7i7ju"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8i287"]
@@ -21,10 +20,10 @@ offset_bottom = 407.0
 text = "Play"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 983.0
-offset_top = 459.0
-offset_right = 1140.0
-offset_bottom = 552.0
+offset_left = 973.0
+offset_top = 419.0
+offset_right = 1130.0
+offset_bottom = 512.0
 tooltip_text = "qwuit"
 text = "Quit"
 
@@ -37,19 +36,17 @@ position = Vector2(1018, 302)
 texture = ExtResource("3_xlrk2")
 
 [node name="Middle-a" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1507, 572)
 scale = Vector2(13.4345, 11.2312)
 texture = ExtResource("4_apbt2")
 
-[node name="Crate" type="Sprite2D" parent="."]
-position = Vector2(995, 1034)
-scale = Vector2(85.625, 53.25)
-texture = ExtResource("5_4j8wd")
-
 [node name="House" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1904, 209)
 scale = Vector2(17.704, 10.1574)
 texture = ExtResource("6_7i7ju")
 
+[connection signal="button_up" from="Play" to="." method="_on_play_button_up"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
