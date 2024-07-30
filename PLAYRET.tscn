@@ -131,12 +131,3 @@ animation = &"Idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
-
-[node name="Button" type="Button" parent="Camera2D"]
-offset_left = -519.0
-offset_top = -162.0
-offset_right = -470.0
-offset_bottom = -131.0
-text = "Exit"
-
-[connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]
