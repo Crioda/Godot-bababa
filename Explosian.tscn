@@ -13,13 +13,18 @@ script = ExtResource("1_u8cao")
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_bxsek")
 
+[node name="Detonation" type="Timer" parent="."]
+wait_time = 11.811
+autostart = true
+
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4096.0
+wait_time = 0.215
 autostart = true
 
 [node name="PixelBomb" type="Sprite2D" parent="."]
-position = Vector2(1, 9.53674e-07)
-scale = Vector2(0.5625, 0.63125)
+position = Vector2(4, -1.5)
+scale = Vector2(1.5, 1.45)
 texture = ExtResource("2_rpfoh")
 
+[connection signal="timeout" from="Detonation" to="." method="_on_detonation_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

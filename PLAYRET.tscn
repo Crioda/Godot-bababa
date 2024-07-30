@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bgkbyg6spydk4"]
+[gd_scene load_steps=27 format=3 uid="uid://bgkbyg6spydk4"]
 
 [ext_resource type="Script" path="res://PLAYRET.gd" id="1_k8b7m"]
 [ext_resource type="Texture2D" uid="uid://w5h3si2ohm2u" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-hurt/player-hurt-2.png" id="2_6i4u7"]
@@ -25,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://d4k115vs5aoul" path="res://Sunny Land Collection Files/Assets/Environments/Forest/Forest Pack/PNG/sprites/player/player-jump/player-jump-4.png" id="23_tj5wo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w2jy7"]
+radius = 11.0
+height = 28.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_itiu1"]
 animations = [{
@@ -118,16 +120,25 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ba0yt"]
+radius = 13.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_k8b7m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_w2jy7")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 0)
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_itiu1")
 animation = &"Idle"
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
 zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_ba0yt")
+debug_color = Color(0.98613, 0.115326, 5.77569e-07, 0.42)
