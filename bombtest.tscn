@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcx5fiqrjfp0u"]
+
+[ext_resource type="Texture2D" uid="uid://vkbdfnqyg6tf" path="res://Sunny Land Collection Files/Assets/Packs/Woods Pack/SPRITES/player/jump/player-jump-2.png" id="1_2wok6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xg47p"]
+radius = 24.7386
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xg47p")
+
+[node name="Player-jump-2" type="Sprite2D" parent="."]
+position = Vector2(6, 3)
+texture = ExtResource("1_2wok6")
